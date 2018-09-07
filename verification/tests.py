@@ -10,8 +10,8 @@ Each test is a dict with
 TESTS = {
     "Basics": [
         {
-            "input": [17, [1, 3, 4]],
-            "answer": 2
+            "input": "1#+2=13",
+            "answer": -1
         },
         {
             "input": "123*45#=5#088",
@@ -34,6 +34,30 @@ TESTS = {
         {
             "input": "19--45=5#",
             "answer": -1
+        },
+        {
+            "input": "24-35=-##",
+            "answer": 1
+        },
+        {
+            "input": "642*3=1#26",
+            "answer": 9
+        },
+        {
+            "input": "-#*2=-14",
+            "answer": 7
+        },
+        {
+            "input": "-2+-8=-1#",
+            "answer": 0
+        },
+        {
+            "input": "#3#*4#=34639",
+            "answer": 7
+        },
+        {
+            "input": "-2*#=-8",
+            "answer": 4
         }
 
     ]

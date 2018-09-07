@@ -6,10 +6,10 @@ requirejs(['ext_editor_io', 'jquery_190'],
         var $tryit;
 
         var io = new extIO({
-            multipleArguments: true,
+            multipleArguments: false,
             functions: {
-                python: 'stones',
-                js: 'stones'
+                python: 'safe_code',
+                js: 'safeCode'
             }
         });
         io.start();
