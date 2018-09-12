@@ -1,0 +1,31 @@
+
+<body data-author="likewind">
+<div class="question-answer">
+    <div class="question">
+        How should I start solving this task?
+    </div>
+    <div class="answer">
+        In order for you to be comfortable working with the input data, it can be divided into several parts: the first number, mathematical action, second number and the result. Note that the result is always separated from the rest of the expression by the '=' sign, and the mathematical expressions can only be '+', '-', '*'.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        I’ve divided the expression into elements. What should I do next?
+    </div>
+    <div class="answer">
+Now you need to analyze these expressions, consistently substituting the '#' signs with the numbers from 0 to 9 . As soon as you find the number, which after being substituted made the expression correct, it’ll be the answer. If not one of them makes the cut, you should return -1.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        What should I do if during the substitution a certain number made the equation correct, but my answer doesn’t match the one that’s specified as correct?
+    </div>
+    <div class="answer">
+Perhaps you didn’t consider one of the rules, namely: the number substituted for '#' should be different from those already used in the expression. Thus, even if the expression is correct when substituting a certain number, this number already was in the input string, so it won’t be considered as the correct answer.
+    </div>
+</div>
+
+</body>
+
