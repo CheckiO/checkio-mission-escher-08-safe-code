@@ -14,5 +14,9 @@ if (!global.is_checking) {
     assert.equal(safeCode("-5#*-1=5#"), 0)
     assert.equal(safeCode("##*##=302#"), 5)
     assert.equal(safeCode("19--45=5#"), -1)
+    assert.equal(safeCode("##--11=11"), -1)
+    assert.equal(safeCode("#9+3=22"), 1)
+    assert.equal(safeCode("11*#=##"), 2)
+    assert.equal(safeCode("#9+3=12"), -1)
     console.log("Coding complete? Click 'Check' to earn cool rewards!");
 }

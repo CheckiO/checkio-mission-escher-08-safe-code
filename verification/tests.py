@@ -58,6 +58,22 @@ TESTS = {
         {
             "input": "-2*#=-8",
             "answer": 4
+        },
+        {
+            "input": "##--11=11",
+            "answer": -1
+        },
+        {
+            "input": "#9+3=22",
+            "answer": 1
+        },
+        {
+            "input": "11*#=##",
+            "answer": 2
+        },
+        {
+            "input": "#9+3=12",
+            "answer": -1
         }
 
     ]

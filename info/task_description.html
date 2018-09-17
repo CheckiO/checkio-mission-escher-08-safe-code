@@ -12,6 +12,7 @@ A small sheet of thick paper laid on the table next to the vault. There were som
 Your task is to create a function that as input receives an equation in a form of a string with digits, erased places ('#') and one of the three arithmetic operations (+, - or *), for example - "##*##=302#". As a result, your function should return a digit (from the interval 0-9), which when applied instead of all #, made the equation correct. Or -1 (minus one) if this isn’t possible.<br>
 <br>
 Important note - none of the figures that already are in the equation cannot be in place of #. Also, if after the equal sign (=) there are 2 or more missing symbols, the answer cannot consist of zeros (00, 000, etc.).<br>
+Numbers in the format like #n, #nn and so on, where n - any digit, can't start with 0. For example, "#9+3=12" == -1.<br>
 In case there are several suitable digits - use the smallest of them.
 Еhe numbers in the formula can be both positive (for example, "1+1=#") and negative, with the "-" sign before them ("19--45=5#", "-1*-6=#").
 </p>
@@ -39,12 +40,14 @@ In case there are several suitable digits - use the smallest of them.
 <pre class="brush: javascript">
 safeCode("-5#*-1=5#") == 0
 safeCode("##*##=302#") == 5
-safeCode("19--45=5#") == -1</pre>
+safeCode("19--45=5#") == -1
+safeCode("#9+3=12") == -1</pre>
 {% else %}
 <pre class="brush: python">
 safe_code("-5#*-1=5#") == 0
 safe_code("##*##=302#") == 5
 safe_code("19--45=5#") == -1
+safe_code("#9+3=12") == -1
 </pre>
 {% endif %}
 </div>
