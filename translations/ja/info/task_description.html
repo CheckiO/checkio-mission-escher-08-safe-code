@@ -1,0 +1,80 @@
+<!-- Describe task in general -->
+
+<img class="for_info_only half" src="{{MEDIA}}safe.jpg" style="float:left;max-height: 400px">
+
+<div class="story for_info_only">
+あなたの勘は正しかった。
+本棚、部屋着、机、ベッドのような一般的な部屋にあるものに加えて大きな金庫がありました。
+あなたの気持ちは高まりました。この旅は早くも実りあるものになりそうです。
+(無論、金庫が空でなければ)<br>
+<br>
+金庫のそばにあるテーブルの上に小さな厚手の紙片がありました。
+それには数字が消えたある種の式が書かれていました。
+はるか昔は読み取るのは容易だったと思われます。
+しかしこの城における数十年の時の流れは数字の読み取りを困難にしてしまった様です。
+書かれていた数字を推測すれば金庫を開ける正しい数字の組み合わせが分かるでしょう。
+</div>
+
+<p>
+あなたは数字と消えた個所('#') と 3つの演算子 ( +, -, * ) のうちの一つからなる等式を文字列 ( 例: "##*##=302#" ) として受け取り、
+ひとつの数字 ( 0から9の間 ) を返さなければなりません。
+
+# の代わりにその数字を適用した場合に等式が成立すること。
+等式の成立が不可能な場合は -1 を返すこと。<br>
+<br>
+重要な注意: 
+既に等式に使用されている数字は # に使えません。
+また、= の後ろに  # が 2つ以上ある場合には 等式の答えが ゼロだけで出来ていてはなりません。(00, 000 など)<br>
+数字が #n, #nn など( n は任意の数字 ) の形式の場合は 0 で始まってはなりません。
+例: "#9+3=12" == -1"<br>
+等式が成立する数字の候補が複数ある場合は最も小さい数字を返すこと。
+式の数値には正の数 ( 例: "1+1=#" ) と負の数の両方が使用されます。負の数の場合は '-'記号が数値の前に付きます。( 例: "19--45=5#", "-1*-6=#" )
+</p>
+
+<div class="for_info_only" style="text-align: center">
+    <img src="{{MEDIA}}find_code.jpg" style="max-height: 250px">
+</div>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>入力: </strong>#を含む数式
+</p>
+
+<p>
+    <strong>Output: </strong> 一桁の数
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>例:</strong>
+</p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+safeCode("-5#*-1=5#") == 0
+safeCode("##*##=302#") == 5
+safeCode("19--45=5#") == -1
+safeCode("#9+3=12") == -1</pre>
+{% else %}
+<pre class="brush: python">
+safe_code("-5#*-1=5#") == 0
+safe_code("##*##=302#") == 5
+safe_code("19--45=5#") == -1
+safe_code("#9+3=12") == -1
+</pre>
+{% endif %}
+</div>
+
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+    <strong>どのように使われるか: </strong>
+    重要な情報を守るための暗号など。
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p><strong>事前条件</strong>:<br>
+    answer - [0-9] or -1
+</p>
